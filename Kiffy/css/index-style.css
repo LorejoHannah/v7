@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    color: #C97A8C;
+}
+
+body {
+    background-color: #C97A8C;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../image/kiffy.png);
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: relative;
+}
+
+nav {
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    padding: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: rgb(245, 95, 95);
+    border-radius: 5px;
+    box-shadow: 0 4px 15px #fbc1d7;
+}
+
+.buy-btn, .buy-btn2 {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 14px 40px;
+    font-weight: 400;
+    background-image: linear-gradient(45deg, rgb(245, 95, 95), #fbc1d7);
+    font-size: 14px;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+}
+
+.buy-btn:hover, .buy-btn2:hover {
+    border-top-right-radius: 20px;
+    box-shadow: 0 4px 15px rgba(245, 95, 95, 0.3);
+    transform: translateY(-2px);
+}
+
+.content {
+    margin-top: 5.8%;
+    max-width: 600px;
+    margin-left: 2%;
+    cursor: default;
+}
+.p1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-style: italic;
+    transition: transform 0.5s;
+}
+.p1:hover {
+    transform: scale(1.05);
+}
+.h1 {
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    font-weight: bold;
+    transition: transform 0.5s;
+}
+.h1:hover {
+    transform: scale(1.05);
+}
+.feature-img {
+    width: 100%;
+    max-width: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    transition: transform 0.5s;
+    height: auto;
+}
+
+.feature-img:hover {
+    transform: scale(1.05);
+}
+.h2 {
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    font-weight: bold;
+    color: #C97A8C;
+    transition: transform 0.5s;
+}
+.h2:hover {
+    transform: scale(1.05);
+}
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.feature-img2 {
+    width: 100%;
+    max-width: 800px;
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    transition: transform 0.5s;
+}
+
+.feature-img:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .main {
+        padding: 10px 5%;
+    }
+
+    .feature-img {
+        right: 10%;
+    }
+}
+
+@media (max-width: 992px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .content {
+        max-width: 80%;
+        margin-left: 10%;
+    }
+
+    .feature-img {
+        right: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .h1, .h2 {
+        font-size: 50px;
+    }
+
+    .p1 {
+        font-size: 25px;
+    }
+
+    .buy-btn, .buy-btn2 {
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+
+    .feature-img {
+        max-width: 200px;
+        right: 5%;
+    }
+}
+
+@media (max-width: 576px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .content {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .h1, .h2 {
+        font-size: 40px;
+    }
+
+    .p1 {
+        font-size: 20px;
+    }
+
+    .feature-img {
+        max-width: 150px;
+        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
